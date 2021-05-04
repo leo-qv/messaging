@@ -8,6 +8,10 @@
 .idea/**/usage.statistics.xml
 .idea/**/dictionaries
 .idea/**/shelf
+.settings*
+.project
+.classPath*
+
 
 # Generated files
 .idea/**/contentModel.xml
