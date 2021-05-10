@@ -7,4 +7,5 @@ EXPOSE 8081
 COPY ./pom.xml ./
 CMD ["mvn", "install"]
 COPY . .
-ENTRYPOINT ["java","-jar","/target/app/chat-0.0.1-SNAPSHOT.jar"]
+CMD ["mvn", "package"]
+ENTRYPOINT ["java","-jar","/app/target/chat-0.0.1-SNAPSHOT.jar"]
