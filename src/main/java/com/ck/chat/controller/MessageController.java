@@ -10,6 +10,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+@CrossOrigin(origins = "*")
 @RestController
 @RequestMapping("data")
 public class MessageController {
@@ -37,7 +38,7 @@ public class MessageController {
                 .stream()
                 .filter(fetchedMessages -> messageId.equals(fetchedMessages.getId()))
                 .findFirst()
-                .orElseThrow((() -> new ResourceNotFoundException("Employee not found for this id :: " + messageId)));
+                .orElseThrow((() -> new ResourceNotFoundException("Message not found for this id :: " + messageId)));
 
         iMessageService.deleteMessage(messageId);
         System.out.println("Message deleted");
